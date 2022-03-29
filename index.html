@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <div id="change">Some Text</div>
+    <select name="font" id="font" onchange="changeFont(this.value);">
+        <option value="Arial">Arial</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Georgia">Georgia</option>
+    </select>
+    <select name="foreground" id="foreground" onchange="changeForeground(this.value);">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <select name="background" id="background" onchange="changeBackground(this.value);">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <script>
+        var obj = document.getElementById('change');
+
+        function changeFont(val) {
+            obj.style.fontFamily = val;
+        }
+
+        function changeForeground(val) {
+            obj.style.color = val;
+        }
+
+        function changeBackground(val) {
+            obj.style.backgroundColor = val;
+        }
+    </script>
+
+</body>
+
+</html>
